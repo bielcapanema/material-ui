@@ -168,12 +168,16 @@ const FormControl = React.forwardRef(function FormControl(props, ref) {
     hiddenLabel,
     margin: (size === 'small' ? 'dense' : undefined) || margin,
     onBlur: () => {
-      setFocused(false);
+      setTimeout(function () {
+        setFocused(false);
+      });
     },
     onEmpty,
     onFilled,
     onFocus: () => {
-      setFocused(true);
+      setTimeout(function () {
+        setFocused(true);
+      });
     },
     registerEffect,
     required,
